@@ -1,0 +1,6 @@
+previous_output_dir_num: '30'
+current_output_dir_num: '31'
+URL: https://translate.google.com/?hl=vi&sl=en&tl=km&op=translate
+INPUT_AREA_XPATH: /html/body/c-wiz/div/div[2]/c-wiz/div[2]/c-wiz/div[1]/div[2]/div[2]/div/c-wiz/span/span/div/textarea
+SOURCE_PATH: input/train.en
+TARGET_PATH: /html/body/c-wiz/div/div[2]/c-wiz/div[2]/c-wiz/div[1]/div[2]/div[2]/c-wiz/div/div[6]/div/div[1]
