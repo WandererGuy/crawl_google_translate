@@ -7,10 +7,9 @@
 	download latest : https://googlechromelabs.github.io/chrome-for-testing/
 
 ```
-python update_config.py
-python translate.py
+START.bat
 ```
-fix value in postprocess.py
+fix value in postprocess.py to lattest folder name in ./output
 ```
 python postprocess.py
 ```
