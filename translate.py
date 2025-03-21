@@ -57,7 +57,7 @@ from multiprocessing import Pool
 import multiprocessing
 CPU_COUNT = multiprocessing.cpu_count()
 CPU_COUNT = CPU_COUNT - 1
-
+# CPU_COUNT = 2
 
 def return_cracked(cracked_folder_ls):
     count = 0 
@@ -131,13 +131,24 @@ def load_text(source_path):
     return source_lines_ls
 
 def fill_input_area(text_to_translate):
+    
     input_area = DRIVER.find_element(By.XPATH, INPUT_AREA_XPATH)
     input_area.clear()
+    
+    input_area = DRIVER.find_element(By.XPATH, INPUT_AREA_XPATH)
     input_area.send_keys(text_to_translate)
     time.sleep(WAIT_RESPONSE_TIME)
 
 def translate(source_lines_ls):
     DRIVER.get(URL) 
+    source_button = "/html/body/div[2]/div[6]/div[4]/div/div/div/div[2]/section[1]/ol/li[1]/div/div[1]/div/div[1]/div/a"
+    english_button = "/html/body/div[7]/div[2]/div/div/ol/li[21]/a"
+    target_button = "/html/body/div[2]/div[6]/div[4]/div/div/div/div[2]/section[1]/ol/li[1]/div/div[1]/div/div[2]/div[1]/a"
+    khmer_button = "/html/body/div[8]/div[2]/div/div/ol/li[46]/a"
+    DRIVER.find_element(By.XPATH, source_button).click()
+    DRIVER.find_element(By.XPATH, english_button).click()
+    DRIVER.find_element(By.XPATH, target_button).click()
+    DRIVER.find_element(By.XPATH, khmer_button).click()
     collect_translate = {}
     start = time.time()
     try:
@@ -145,16 +156,18 @@ def translate(source_lines_ls):
             if time.time() - start > MAX_TIME_BROWSER:
                 DRIVER.close()
                 break 
-            print ('--------------------------------------')
-            print ('inputting text...')
-            print (source_line)
             print ('waiting for translate ...')
             fill_input_area(text_to_translate = source_line)
             target_target_div = DRIVER.find_element(By.XPATH, TARGET_PATH)
             while target_target_div.text == "":
                 print ('IP HAVE BEEN BANNED')
                 break 
+            print ('--------------------------------------')
+            print ('inputting text...')
+            print (source_line)
+            print ('translating text...')
             print (target_target_div.text)
+            print ('--------------------------------------')
             collect_translate[source_line] = target_target_div.text
     finally:
         import uuid

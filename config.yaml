@@ -1,6 +1,6 @@
-previous_output_dir_num: '46'
-current_output_dir_num: '47'
-URL: https://translate.google.com/?hl=vi&sl=en&tl=km&op=translate
-INPUT_AREA_XPATH: /html/body/c-wiz/div/div[2]/c-wiz/div[2]/c-wiz/div[1]/div[2]/div[2]/div/c-wiz/span/span/div/textarea
+previous_output_dir_num: '27'
+current_output_dir_num: '28'
+URL: https://duckduckgo.com/?q=google+translate&t=h_&ia=web
+INPUT_AREA_XPATH: /html/body/div[2]/div[6]/div[4]/div/div/div/div[2]/section[1]/ol/li[1]/div/div[1]/div/div[1]/textarea
 SOURCE_PATH: input/train.en
-TARGET_PATH: /html/body/c-wiz/div/div[2]/c-wiz/div[2]/c-wiz/div[1]/div[2]/div[2]/c-wiz/div/div[6]/div/div[1]
+TARGET_PATH: /html/body/div[2]/div[6]/div[4]/div/div/div/div[2]/section[1]/ol/li[1]/div/div[1]/div/div[2]/div[2]

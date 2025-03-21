@@ -14,7 +14,7 @@ os.makedirs('final_output', exist_ok=True)
 os.makedirs('final_output_only', exist_ok=True)
 
 OUTPUT_FILE_EN_KHMER = 'final_output/en_khmer.txt'
-JSON_FOLDER_PATH = './output/' + '47' # fix this, value
+JSON_FOLDER_PATH = './output/' + '27' # fix this, value
 import copy
 def refine_sentence(text):
     text = text.replace('\n', ' ')
