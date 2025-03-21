@@ -1,5 +1,5 @@
-previous_output_dir_num: '27'
-current_output_dir_num: '28'
+previous_output_dir_num: '1'
+current_output_dir_num: '2'
 URL: https://duckduckgo.com/?q=google+translate&t=h_&ia=web
 INPUT_AREA_XPATH: /html/body/div[2]/div[6]/div[4]/div/div/div/div[2]/section[1]/ol/li[1]/div/div[1]/div/div[1]/textarea
 SOURCE_PATH: input/train.en
